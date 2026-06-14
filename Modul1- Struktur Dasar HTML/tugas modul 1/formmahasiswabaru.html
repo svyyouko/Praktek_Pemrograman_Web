@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+            <legend>Data Pribadi</legend>
+
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required><br><br>
+
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+            <label for="pria">Pria</label><br>
+            <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
+            <label for="wanita">Wanita</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobi (Pilih minimal 2)</legend>
+            <input type="checkbox" id="hobi_membaca" name="hobi[]" value="Membaca">
+            <label for="hobi_membaca">Membaca</label><br>
+
+            <input type="checkbox" id="hobi_olahraga" name="hobi[]" value="Olahraga">
+            <label for="hobi_olahraga">Olahraga</label><br>
+
+            <input type="checkbox" id="hobi_musik" name="hobi[]" value="Musik">
+            <label for="hobi_musik">Musik</label><br>
+            
+            <input type="checkbox" id="hobi_desain" name="hobi[]" value="Desain">
+            <label for="hobi_desain">Desain</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Jurusan & Alamat</legend>
+
+            <label for="jurusan">Pilihan Jurusan:</label><br>
+            <select id="jurusan" name="jurusan" required>
+                <option value="" disabled selected>-- Pilih Jurusan Anda --</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+                <option value="Bisnis Digital">Bisnis Digital</option>
+            </select><br><br>
+
+            <label for="alamat">Alamat Lengkap (Opsional):</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="50" placeholder="Masukkan detail alamat tempat tinggal saat ini..."></textarea><br><br>
+        </fieldset>
+
+        <br>
+        <button type="submit">Kirim Formulir</button>
+
+    </form>
+
+</body>
+</html>
