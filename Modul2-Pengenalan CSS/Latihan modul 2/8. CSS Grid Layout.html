@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+            gap: 15px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        .grid-item {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+        .span-2-kolom {
+            grid-column: span 2;
+        }
+        .hijau-standar { background-color: #4CAF50; }
+        .merah { background-color: red; }
+        .biru { background-color: blue; }
+        .hijau { background-color: green; }
+        .hitam { background-color: black; }
+        .pink { background-color: pink; color: black; } 
+    </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item hijau-standar span-2-kolom">Item 1 (Lebar 2 Kolom)</div>
+            <div class="grid-item merah">Item 2</div>
+            <div class="grid-item biru">Item 3</div>
+            <div class="grid-item hijau">Item 4</div>
+            <div class="grid-item hitam">Item 5</div>
+            <div class="grid-item pink">Item 6</div>
+        </div>
+    </body>
+</html>

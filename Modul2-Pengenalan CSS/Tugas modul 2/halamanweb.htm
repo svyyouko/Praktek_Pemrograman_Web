@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum CSS</title>
+    <style>
+        /* =========================================
+           4b. PENGATURAN BOX-SIZING (RESET)
+           ========================================= */
+        * {
+            box-sizing: border-box; /* Memastikan padding dan border tidak menambah lebar/tinggi elemen */
+            margin: 0; /* Menghilangkan jarak bawaan browser */
+            padding: 0;
+        }
+
+        /* =========================================
+           1. TAMPILAN UMUM
+           ========================================= */
+        body {
+            background-color: #add8e6; /* 1a. Background biru muda */
+            font-family: Arial, sans-serif; /* 1b. Font Arial atau sans-serif */
+            padding: 20px; /* Jarak dari tepi layar agar lebih rapi */
+        }
+
+        h1 {
+            color: white; /* 1c. Teks putih */
+            font-size: 40px; /* 1c. Ukuran besar sekitar 40px */
+            text-align: center; /* Diposisikan di tengah agar seimbang */
+            margin-bottom: 20px; /* Jarak dengan paragraf di bawahnya */
+        }
+
+        p {
+            background-color: #d3d3d3; /* 1d. Latar abu-abu muda */
+            color: black; /* 1d. Teks hitam */
+            padding: 20px; /* 1d. Padding nyaman dibaca */
+            border-radius: 10px; /* 4a. Sudut membulat */
+            max-width: 800px; /* Lebar disamakan dengan container kotak */
+            margin: 0 auto 30px auto; /* Posisi di tengah layar */
+            line-height: 1.6; /* Jarak antar baris teks agar mudah dibaca */
+        }
+
+        /* =========================================
+           2. LAYOUT KOTAK (BOX)
+           ========================================= */
+        .container {
+            max-width: 800px; /* 2e. Maksimal lebar 800px */
+            margin: 0 auto; /* 2e. Diposisikan di tengah halaman */
+            
+            display: grid; /* 2d. Menggunakan CSS Grid */
+            grid-template-columns: repeat(3, 1fr); /* 2d. 3 kolom yang sama besar (1 fraction) */
+            gap: 20px; /* 2d. Jarak antar kotak 20px */
+        }
+
+        /* Gaya dasar untuk semua kotak */
+        .box1, .box2, .box3 {
+            border: 2px solid black; /* 2b. Border hitam tebal 2px */
+            padding: 10px; /* 2b. Padding 10px */
+            height: 150px; /* 2b. Tinggi 150px */
+            border-radius: 10px; /* 4a. Sudut membulat */
+            
+            /* Tambahan: Untuk meletakkan teks di tengah kotak */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* 2c. Warna latar belakang masing-masing kotak */
+        .box1 {
+            background-color: #ff9999; /* Merah muda */
+        }
+        .box2 {
+            background-color: #99ff99; /* Hijau muda */
+        }
+        .box3 {
+            background-color: #9999ff; /* Biru muda */
+        }
+
+        /* =========================================
+           3. RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================= */
+        /* 3a. Untuk layar tablet (lebar maksimal 768px) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* Berubah menjadi 2 kolom */
+            }
+        }
+
+        /* 3b & 3c. Untuk layar smartphone (lebar maksimal 480px) */
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* 3b. Berubah menjadi 1 kolom penuh */
+            }
+            
+            h1 {
+                font-size: 28px; /* 3c. Ukuran font judul diperkecil */
+            }
+            
+            .box1, .box2, .box3 {
+                height: 120px; /* 3c. Tinggi kotak dikurangi */
+            }
+            
+            p {
+                padding: 12px; /* 3c. Padding paragraf dikurangi agar proporsional di layar kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Praktikum CSS</h1>
+    
+    <p>
+        Selamat datang di halaman praktikum. Ini adalah contoh paragraf penjelasan di bawah judul utama. Halaman ini mendemonstrasikan penggunaan dasar HTML dan CSS, termasuk pengaturan warna, tata letak Grid yang responsif, serta penyesuaian ukuran elemen secara proporsional.
+    </p>
+
+    <div class="container">
+        <div class="box1">Kotak 1</div>
+        <div class="box2">Kotak 2</div>
+        <div class="box3">Kotak 3</div>
+    </div>
+
+</body>
+</html>
